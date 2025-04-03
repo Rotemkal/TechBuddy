@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
         <title>Request Help - TechBuddy</title>
     </head>
     <body>
         <h1>Need Tech help? 🖥️</h1>
+        <h2>Some details before we can start...</h2>
         <form action="/submit-request" method="post">
 
         <label for="country"> Enter your country:</label><br>
@@ -16,18 +18,25 @@
         <label for=payment> Are you willing to pay for help?</label><br>
         <input type="radio" id="yes_payment" name="payment" value="yes"> Yes
         <input type="radio" id="no_payment" name="payment" value="no"> No<br><br>
-
+        
         <label for="video_help">Do you know how to set up a video call for remote help?</label><br>
-        <input type="radio" id="yes_video" name="video_help" value="yes"> Yes
-        <input type="radio" id="no_video" name="video_help" value="no"> No<br><br>
+        <input type="radio" id="yes_video" name="video_help" value="yes" onclick="preferred_video_way()"> Yes
+        <input type="radio" id="no_video" name="video_help" value="no" onclick="preferred_video_way()"> No<br><br>
 
-        <label for="visit_help">Are you willing that the helper will come to your home?</label><br>
-        <input type="radio" id="yes_visit" name="visit_help" value="yes"> Yes
-        <input type="radio" id="no_visit" name="visit_help" value="no"> No<br><br>
+        <div id="pref_video_way" style="display:none;"> <!--does not appear until the user fill they can set up a video call-->
+            <label for="email">Your preferred way:</label><br>
+            <input type="radio" id="whatsapp_video" name="preferred_vid">WhatsApp video call 
+            <input type="radio" id="zoom_video" name="preferred_vid"> Zoom video call<br><br> 
+        </div>
 
         <label for="yes_email">Can we send you an email when someone can help you?</label><br>
-        <input type="radio" id="yes_email" name="approve_by_email" value="yes"> Yes
-        <input type="radio" id="no_email" name="approve_by_email" value="no"> No<br><br>
+        <input type="radio" id="yes_email" name="approve_by_email" value="yes" onclick="enter_your_email()" > Yes
+        <input type="radio" id="no_email" name="approve_by_email" value="no" onclick="enter_your_email()" > No<br><br>
+
+        <div id="email_field" style="display:none;"> <!--does not appear until the user approves us to send him emails-->
+            <label for="email">Your email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+        </div>
 
         <button type="submit">Create my account!</button>
     </form>
