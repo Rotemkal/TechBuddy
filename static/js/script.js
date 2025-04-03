@@ -22,9 +22,14 @@ function preferred_video_way(){
 
 function validateForm() {
     const email = document.getElementById("email").value;
+
     const phone_number = document.getElementById("phone_number").value;
     const valid_form_number1 = /^\+[0-9]{10}$/; 
     const valid_form_number2 = /^[0-9]{10}$/;
+
+    const password = document.getElementById("password").value;
+    const confirm_password = document.getElementById("confirm_password").value;
+    const password_pattern= /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+={}[\]:;,.<>?/-]).{8,}/;
 
     if (document.getElementById("yes_email").checked) {
 
@@ -39,6 +44,16 @@ function validateForm() {
         return false;
     }
 
+    if (password != confirm_password) {
+        alert("passwords do not match! try again.");
+        return false;
+    }
+
+    if (!password_pattern.test(password)) {
+        alert("Please enter a valid password");
+        return false;
+    }
+    
     return true;
 }
 
