@@ -25,7 +25,7 @@ function validateForm() {
     const phone_number = document.getElementById("phone_number").value;
     const valid_form_number1 = /^\+[0-9]{10}$/; 
     const valid_form_number2 = /^[0-9]{10}$/;
-    
+
     if (document.getElementById("yes_email").checked) {
 
         if (!email.includes('@')) {
@@ -40,4 +40,8 @@ function validateForm() {
     }
 
     return true;
+}
+
+function goBack(){
+    window.location.href = "/";
 }
