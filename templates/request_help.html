@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Request Help - TechBuddy</title>
+    </head>
+    <body>
+        <h1>Need Tech help? 🖥️</h1>
+        <form action="/submit-request" method="post">
+
+        <label for="country"> Enter your country:</label><br>
+        <input type="text" name="country" id="country" ><br><br>
+
+        <label for="city"> Enter your city:</label><br>
+        <input type="text" name="city" id="city" ><br><br>
+
+        <label for=payment> Are you willing to pay for help?</label><br>
+        <input type="radio" id="yes_payment" name="payment" value="yes"> Yes
+        <input type="radio" id="no_payment" name="payment" value="no"> No<br><br>
+
+        <label for="video_help">Do you know how to set up a video call for remote help?</label><br>
+        <input type="radio" id="yes_video" name="video_help" value="yes"> Yes
+        <input type="radio" id="no_video" name="video_help" value="no"> No<br><br>
+
+        <label for="visit_help">Are you willing that the helper will come to your home?</label><br>
+        <input type="radio" id="yes_visit" name="visit_help" value="yes"> Yes
+        <input type="radio" id="no_visit" name="visit_help" value="no"> No<br><br>
+
+        <label for="yes_email">Can we send you an email when someone can help you?</label><br>
+        <input type="radio" id="yes_email" name="approve_by_email" value="yes"> Yes
+        <input type="radio" id="no_email" name="approve_by_email" value="no"> No<br><br>
+
+        <button type="submit">Create my account!</button>
+    </form>
+    </body>
+</html>

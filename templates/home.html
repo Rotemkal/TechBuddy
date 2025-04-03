@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to TechBuddy</title> <!-- The title displayed on the browser tab -->
+</head>
+<body>
+    <h1>Welcome to TechBuddy 💬</h1> <!-- Main heading on the page -->
+
+    <!-- Form that sends the selection to the /choose-role route -->
+    <form action="/choose-role" method="post">
+        <p>Who are you?</p>
+
+        <!-- Option 1: Technophobe (needs tech help) -->
+        <input type="radio" name="role" value="technophobe" required> I need tech help<br>
+
+        <!-- Option 2: Tech-savvy (wants to help) -->
+        <input type="radio" name="role" value="tech-savvy"> I want to help<br><br>
+
+        <!-- Submit button -->
+        <button type="submit">Continue</button>
+    </form>
+</body>
+</html>
