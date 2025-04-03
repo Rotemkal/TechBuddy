@@ -19,3 +19,25 @@ function preferred_video_way(){
         pref_video_way.style.display = "none"; // do not let the user choose his preferred way 
     }
 }
+
+function validateForm() {
+    const email = document.getElementById("email").value;
+    const phone_number = document.getElementById("phone_number").value;
+    const valid_form_number1 = /^\+[0-9]{10}$/; 
+    const valid_form_number2 = /^[0-9]{10}$/;
+    
+    if (document.getElementById("yes_email").checked) {
+
+        if (!email.includes('@')) {
+            alert("Please enter a valid email.");
+            return false;
+        }
+    }
+
+    if (!valid_form_number1.test(phone_number) && !valid_form_number2.test(phone_number)) {
+        alert("Please enter a valid phone number.");
+        return false;
+    }
+
+    return true;
+}
