@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+        <title>Sign Up as Tech-Savvy Helper - TechBuddy</title>
+    </head>
+    <body>
+        <h1>Sign Up as a Tech Helper 🖥️</h1>
+        <h2>Enter your details to get started...</h2>
+        <form action="/submit-helper" method="post" onsubmit="return validateForm()">
+            
+        <label for="username">Username:</label><br>
+        <input type="text" name="username" id="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" id="password" required><br><br>
+        <small>Password must be at least 8 characters long, contain at least one number, one lowercase letter, one uppercase letter, and one special character.</small><br><br>
+
+        <label for="confirm_password">Confirm Password:</label><br>
+        <input type="password" name="confirm_password" id="confirm_password" required><br><br>
+
+        <label for="country">Enter your country:</label><br>
+        <input type="text" name="country" id="country"><br><br>
+
+        <label for="city">Enter your city:</label><br>
+        <input type="text" name="city" id="city"><br><br>
+
+        <label for="specialization">Specialization (e.g., computer setup, printer issues, etc.):</label><br>
+        <input type="text" name="specialization" id="specialization" required><br><br>
+
+        <label for="phone_number">Enter your phone number:</label>
+        <input type="text" name="phone_number" id="phone_number"><br><br>
+
+        <button type="submit">Create my account!</button><br>
+        </form>
+
+        <button onclick="goBack()">Go Back to Home</button>
+    </body>
+</html>
