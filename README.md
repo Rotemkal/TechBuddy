@@ -8,19 +8,19 @@ This project is built with **Python** and **Flask** and focuses on creating mean
 
 ## 🚀 Features
 
-- Flask-based web server
-- Home page with a welcome message
-- Clean project structure
-- Virtual environment setup
-- Coming soon: request form, volunteer matching, email notifications
-
+- **User Registration** for both helpers and helpseekers.
+- **Role-based Navigation**: Different experiences for helpers and helpseekers.
+- **Form Validation**: Ensures correct user data input (email, phone number, etc.).
+- **Database Integration**: Stores user and request data.
+- **Email Notifications**: Send emails to users when a match is found.
+  
 ---
 
 ## 🛠️ Tech Stack
 
 - Python 3.8
 - Flask 3.x
-- HTML/CSS (coming soon)
+- HTML/CSS
 - VS Code + GitHub
 
 ---
