@@ -18,10 +18,10 @@ This project is built with **Python** and **Flask** and focuses on creating mean
 
 ## 🛠️ Tech Stack
 
-- Python 3.8
-- Flask 3.x
-- HTML/CSS
-- VS Code + GitHub
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Flask
+- **Database**: SQLite
+- **Environment Variables**: .env file for storing sensitive data such as `SECRET_KEY`, `DATABASE_PASSWORD`
 
 ---
 
