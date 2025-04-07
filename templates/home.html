@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <title>Welcome to TechBuddy</title> <!-- The title displayed on the browser tab -->
 </head>
 <body>
     <h1>Welcome to TechBuddy 💬</h1> <!-- Main heading on the page -->
+    <div class="button-container">
+        <!-- Form that sends the selection to the /choose-role route -->
+        <form action="/choose-role" method="post">
 
-    <!-- Form that sends the selection to the /choose-role route -->
-    <form action="/choose-role" method="post">
-        <p>Who are you?</p>
+            <!-- Option 1: Helpseeker -->
+            <button type="submit" name="role" value="helpseeker" required> Sign up as a helpseeker</button><br>
 
-        <!-- Option 1: Helpseeker -->
-        <input type="radio" name="role" value="helpseeker" required> Sign up as a helpseeker<br>
+            <!-- Option 2: Helper -->
+            <button type="submit" name="role" value="helper"> Sign up as a helper</button><br>
 
-        <!-- Option 2: Helper -->
-        <input type="radio" name="role" value="helper"> Sign up as a helper<br>
-
-        <!-- Option 3: Login -->
-        <input type="radio" name="role" value="login"> I want to login<br><br>
-        
-        <!-- Submit button -->
-        <button type="submit">Continue</button>
-    </form>
+            <!-- Option 3: Login -->
+            <button type="submit" name="role" value="login"> I want to login</button>
+        </form>
+    </div>
 </body>
 </html>

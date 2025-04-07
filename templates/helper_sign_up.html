@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/helper_sign_up.css') }}">
         <title>Sign Up as Tech-Savvy Helper - TechBuddy</title>
     </head>
     <body>
@@ -31,6 +32,15 @@
 
         <label for="phone_number">Enter your phone number:</label>
         <input type="text" name="phone_number" id="phone_number"><br><br>
+        
+        <label for="yes_email">Would you like to receive an email with the contact details of the person you agreed to assist?</label><br>
+        <input type="radio" id="yes_email" name="approve_by_email" value="yes" onclick="enter_your_email()" > Yes
+        <input type="radio" id="no_email" name="approve_by_email" value="no" onclick="enter_your_email()" > No<br><br>
+
+        <div id="email_field" style="display:none;"> <!--does not appear until the user approves us to send him emails-->
+            <label for="email">Your email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+        </div>
 
         <button type="submit">Create my account!</button><br>
         </form>
